@@ -1,0 +1,3 @@
+buildCmd: cd samples/reladomo-sample-simple; mvn compile
+testCmd: cd samples/reladomo-sample-simple; mvn test
+ignoreExistingCoverage: true
