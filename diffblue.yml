@@ -1,0 +1,4 @@
+buildCmd: cd samples/reladomo-sample-simple; mvn compile
+testCmd: cd samples/reladomo-sample-simple; mvn test
+classpathCmd: grep -o ' -classpath [^ ]* ' ../results/build_log.txt | awk '{print $2}'
+ignoreExistingCoverage: true
