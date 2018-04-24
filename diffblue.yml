@@ -3,4 +3,4 @@ testCmd: cd samples/reladomo-sample-simple; mvn test
 classpathCmd: grep -o ' -classpath [^ ]* ' ../results/build_log.txt | awk '{print $2}'
 ignoreExistingCoverage: true
 cbmcArguments:
-  slice-function-calls: org.slf4j.Logger
+  slice-function-calls: "org\.slf4j\.Logger.*"
