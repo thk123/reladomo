@@ -1,4 +1,4 @@
-buildCmd: cd samples/reladomo-sample-simple; mvn compile
+buildCmd: cd samples/reladomo-sample-simple; mvn -e -X -Dmaven.test.skip=true compile
 testCmd: cd samples/reladomo-sample-simple; mvn test
 ignoreExistingCoverage: true
 cbmcArguments:
