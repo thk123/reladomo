@@ -2,4 +2,19 @@ buildCmd: cd samples/reladomo-sample-simple; mvn -e -X -Dmaven.test.skip=true co
 testCmd: cd samples/reladomo-sample-simple; mvn test
 ignoreExistingCoverage: true
 cbmcArguments:
-  slice-function-calls: org\.slf4j\.Logger.*
+phases:
+-
+  timeout: 60
+  cbmcArguments:
+    unwind: 1
+    depth: false
+-
+  timeout: 120
+  cbmcArguments:
+    unwind: 2
+    depth: false
+-
+  timeout: 300
+  cbmcArguments:
+    unwind: 5
+    depth: false
