@@ -3,7 +3,6 @@ testCmd: cd samples/reladomo-sample-simple; mvn test
 classpathCmd: grep -o ' -classpath [^ ]* ' ../results/build_log.txt | awk '{print $2}'
 cbmcArguments:
   depth: false
-  slice-function-calls: org\.slf4j\.Logger.*
   java-external-code-action: 'mock'
 phases:
 -
